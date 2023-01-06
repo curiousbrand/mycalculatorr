@@ -1,10 +1,17 @@
 .App {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding:16px;
+  
+
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +42,54 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgba(16, 15, 15, 0.268);
+  height:530px;
+  width: 300px;
+  border-radius: 22px;
+}
+
+.grid-container > button {
+  text-align: center;
+  font-size: 1.25rem;
+  outline: none;
+}
+
+.grid-container > button:hover,
+.grid-container > button:focus {
+  background-color: azure;
+  color: black;
+}
+
+
+
+.grid-item {
+  color: white;
+  font-weight: 800;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  margin:4px;
+}
+
+.grid-item-AC,.grid-item-percent,.grid-item-plusminus {
+  color: black;
+  background-color: rgb(163, 170, 174);
+}
+.grid-item-0 {
+  grid-column: span 2;
+}
+
+.grid-item-multiply,
+  .grid-item-divide, 
+  .grid-item-add, 
+  .grid-item-subtract,
+  .grid-item-equals {
+  background-color: orange;
 }
